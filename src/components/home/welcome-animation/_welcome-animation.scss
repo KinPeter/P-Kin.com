@@ -1,0 +1,208 @@
+
+$defaultColor: $dark;
+$orangeColor: $orange;
+
+svg#welcome-animation {
+    width: 600px;
+    height: auto;
+    margin: 3rem 3rem 1rem;
+    
+    path { stroke: none; }
+    .default, .default path { fill: $defaultColor }
+    .orange,  .orange path  { fill: $orangeColor }
+    
+    transform-origin: center;
+           
+    #cogs-group {
+        transform: translateX(20%) scaleX(1);
+        #cog1 {
+            transform-origin: 34.1% 19.2%;
+            animation: rotateCog 1.5s infinite linear;
+        }
+        #cog2 {
+            transform-origin: 21.4% 46.2%;
+            animation: rotateCog 2s infinite linear reverse;
+        }
+        #cog3 {
+            transform-origin: 34.5% 76.45%;
+            animation: rotateCog 1.75s infinite linear;
+        }
+        @keyframes rotateCog {
+            from { transform: rotate(0); }
+            to { transform: rotate(360deg); }
+        }
+
+        transform-origin: 28% 50%;
+        animation: closeCogs .2s 5s linear forwards; 
+        @keyframes closeCogs {
+            0%   { transform: translateX(20%) scaleX(1); }
+            100% { transform: translateX(20%) scaleX(0); }
+        }            
+    }
+
+    #logo-p {
+        transform-origin: 25% 50%;
+        transform: translateX(24%) scaleX(0);
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        animation-name: logoP-open, logoP-slideLeft, logoP-firstCloseOpen, logoP-secondCloseOpen;
+        animation-delay: 5.2s, 6s, 7s, 12.4s;
+        animation-duration: .2s, .5s, .6s, .6s;
+        @keyframes logoP-open {
+            0%   { transform: translateX(24%) scaleX(0); }
+            100% { transform: translateX(24%) scaleX(1); }
+        } 
+        @keyframes logoP-slideLeft {
+            0%   { transform: translateX(24%) scaleX(1); }
+            100% { transform: translateX(0) scaleX(1); }
+        } 
+        @keyframes logoP-firstCloseOpen {
+            0%   { transform-origin: 10% 50%; 
+                   transform: translateX(0) scaleX(1); opacity: 1; }
+            50%  { transform: translateX(-10%) scaleX(0); opacity: 0; }
+            100% { transform: translateX(0) scaleX(1); opacity: 1; }
+        }
+        @keyframes logoP-secondCloseOpen {
+            0%   { transform: translateX(0) scaleX(1); opacity: 1; }
+            50%  { transform: translateX(-10%) scaleX(0); opacity: 0; }
+            100% { transform: translateX(-3%) scaleX(1); opacity: 1; }
+        }
+    }
+
+    #curly-left {
+        transform: translateX(22%);
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        animation-name: cl-firstClose, cl-slideLeft;
+        animation-delay: 5s, 6s;
+        animation-duration: .5s;
+        @keyframes cl-firstClose {
+            0%   { transform: translateX(22%); }
+            40%  { transform: translateX(35%); }
+            100% { transform: translateX(27%); }
+        }
+        @keyframes cl-slideLeft {
+            0%   { transform: translateX(27%); }
+            100% { transform: translateX(0); }
+        }
+    }
+    
+    #curly-right {
+        transform: translateX(-25%); 
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        animation-name: cr-firstClose, cr-slideLeft, cr-slideRight, cr-secondClose;
+        animation-delay: 5s, 6s, 7s, 12.4s;
+        animation-duration: .5s, .5s, .5s, .8s;
+        @keyframes cr-firstClose {
+            0%   { transform: translateX(-25%); }
+            40%  { transform: translateX(-38%); }
+            100% { transform: translateX(-30%); }
+        }
+        @keyframes cr-slideLeft {
+            0%   { transform: translateX(-30%); }
+            100% { transform: translateX(-53%); }
+        }
+        @keyframes cr-slideRight {
+            0%   { transform: translateX(-53%); }
+            40%  { transform: translateX(-75%); }
+            100% { transform: translateX(0); }
+        }
+        @keyframes cr-secondClose {
+            0%   { transform: translateX(0); }
+            40%  { transform: translateX(-75%); }
+            100% { transform: translateX(-57%); }
+        }
+    }
+    
+     
+    #logo-dash, #logo-k, #logo-i, #logo-n {
+        opacity: 0;
+        animation-name: spinIn, spinOut;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;        
+        animation-duration: .6s;
+    }    
+    #logo-dash { 
+        transform-origin: 38% 50%;
+        animation-delay: 7.2s, 12.3s; 
+    }
+    #logo-k { 
+        transform-origin: 50% 50%;
+        animation-delay: 7.3s, 12.2s; 
+    }
+    #logo-i { 
+        transform-origin: 63% 50%; 
+        animation-delay: 7.4s, 12.1s;
+    }
+    #logo-n { 
+        transform-origin: 75% 50%; 
+        animation-delay: 7.5s, 12.0s;
+    }    
+    @keyframes spinIn {
+        from { opacity: 0; transform: rotateY(0deg);   } 
+        to   { opacity: 1; transform: rotateY(360deg); }
+    } 
+    @keyframes spinOut {
+        from { opacity: 1; transform: rotateY(360deg); } 
+        to   { opacity: 0; transform: rotateY(0deg);   }
+    }
+    
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    animation-name: blurIn, blurOut;
+    animation-duration: 1s;
+    animation-delay: 0s, 15s;
+    @keyframes blurIn {
+        0%   { filter: blur(10px); opacity: 0; }
+        100% { filter: blur(0px); opacity: 1; }
+    }
+    @keyframes blurOut {
+        0%   {
+            filter: blur(0px); 
+            opacity: 1; 
+            transform: translate(0, 0) scale(1); 
+        }
+        70%  {
+            filter: blur(10px);
+            opacity: 1; 
+            transform: translate(-50px, -50px) scale(.3); 
+        }
+        100% { 
+            filter: blur(10px);
+            opacity: 0; 
+            transform: translate(-200px, -200px) scale(0); 
+        }
+    }
+}
+
+.frontend-development {
+    font-family: sans-serif;
+    color: $orangeColor;
+    font-size: 2rem;
+    span {
+        display: inline-block;
+        transform: translate(-200%, 100%) rotate(45deg);
+        opacity: 0;
+        &:nth-child(8) {
+            margin-right: 1rem;
+        }
+        animation: lettersIn .15s ease forwards;
+        @for $i from 1 through 19 {
+            &:nth-child(#{$i}) {
+                animation-delay: 7.5s + $i / 30; 
+            }
+        }
+    }
+    @keyframes lettersIn {
+        0%   { transform: translate(-200%, 200%) rotate(45deg); opacity: 0; }
+        60%  { transform: translate(0, -20%) rotate(-5deg); opacity: 0.3; }
+        100% { transform: translate(0, 0) rotate(0); opacity: 1; }
+    }
+    
+    animation: textOut .7s 11.5s ease forwards;
+    @keyframes textOut {
+        0%   { filter: blur(0); opacity: 1; }
+        100% { filter: blur(5px); opacity: 0; } 
+    }
+}
