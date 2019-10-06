@@ -1,6 +1,7 @@
 <template>
     <section class="home">
         <h3>This is the home page</h3>
+        <i class="icon-p-logo"></i>
         <app-welcome-animation></app-welcome-animation>
         <app-about></app-about>
         <app-skills></app-skills>
@@ -18,7 +19,7 @@ export default Vue.extend({
     components: {
         appAbout: AboutVue,
         appSkills: SkillsVue,
-        appWelcomeAnimation: WelcomeAnimationVue
+        appWelcomeAnimation: WelcomeAnimationVue,
     },
 });
 </script>

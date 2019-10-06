@@ -8,22 +8,48 @@
     {
       "selection": [
         {
+          "order": 11,
+          "id": 1,
+          "name": "bitbucket",
+          "prevSize": 32,
+          "code": 59649,
+          "tempChar": ""
+        },
+        {
           "order": 5,
           "id": 0,
-          "name": "p-logo"
+          "name": "p-logo",
+          "prevSize": 32,
+          "code": 59648,
+          "tempChar": ""
         }
       ],
       "id": 5,
       "metadata": {
         "name": "My Set",
         "importSize": {
-          "width": 159,
-          "height": 109
+          "width": 512,
+          "height": 512
         }
       },
       "height": 1024,
       "prevSize": 32,
       "icons": [
+        {
+          "id": 1,
+          "paths": [
+            "M44.4 64c-0.12-0.002-0.261-0.003-0.402-0.003-17.533 0-31.773 14.101-31.997 31.581l-0 0.021c0.037 2.016 0.182 3.956 0.428 5.864l-0.028-0.264 135.8 824.2c3.529 20.664 21.221 36.222 42.581 36.4l0.019 0h651.4c0.126 0.002 0.275 0.003 0.425 0.003 15.838 0 28.988-11.506 31.549-26.614l0.026-0.189 135.8-833.6c0.253-1.511 0.397-3.251 0.397-5.026 0-15.836-11.503-28.985-26.608-31.548l-0.189-0.026c-1.655-0.226-3.595-0.371-5.563-0.4l-0.037-0-933.6-0.4zM616.2 659.6h-208l-56.2-294h314.6l-50.4 294z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "grid": 16,
+          "tags": [
+            "bitbucket-brands"
+          ]
+        },
         {
           "id": 0,
           "paths": [
@@ -403,9 +429,12 @@
           "order": 0
         },
         {
-          "name": "check-square-o",
+          "name": "check",
           "id": 70,
-          "order": 0
+          "order": 13,
+          "prevSize": 32,
+          "code": 61510,
+          "tempChar": ""
         },
         {
           "name": "arrows",
@@ -503,9 +532,12 @@
           "order": 0
         },
         {
-          "name": "crosshairs",
+          "name": "goal",
           "id": 90,
-          "order": 0
+          "order": 25,
+          "prevSize": 32,
+          "code": 61531,
+          "tempChar": ""
         },
         {
           "name": "times-circle-o",
@@ -943,9 +975,12 @@
           "order": 0
         },
         {
-          "name": "bars, navicon, reorder",
+          "name": "burger",
           "id": 178,
-          "order": 0
+          "order": 14,
+          "prevSize": 32,
+          "code": 61641,
+          "tempChar": ""
         },
         {
           "name": "list-ul",
@@ -1010,22 +1045,34 @@
         {
           "name": "caret-down",
           "id": 191,
-          "order": 0
+          "order": 0,
+          "prevSize": 32,
+          "code": 61655,
+          "tempChar": ""
         },
         {
           "name": "caret-up",
           "id": 192,
-          "order": 0
+          "order": 0,
+          "prevSize": 32,
+          "code": 61656,
+          "tempChar": ""
         },
         {
           "name": "caret-left",
           "id": 193,
-          "order": 0
+          "order": 0,
+          "prevSize": 28,
+          "code": 61657,
+          "tempChar": ""
         },
         {
           "name": "caret-right",
           "id": 194,
-          "order": 0
+          "order": 0,
+          "prevSize": 28,
+          "code": 61658,
+          "tempChar": ""
         },
         {
           "name": "columns",
@@ -1035,7 +1082,10 @@
         {
           "name": "sort, unsorted",
           "id": 196,
-          "order": 0
+          "order": 0,
+          "prevSize": 28,
+          "code": 61660,
+          "tempChar": ""
         },
         {
           "name": "sort-desc, sort-down",
@@ -1048,9 +1098,12 @@
           "order": 0
         },
         {
-          "name": "envelope",
+          "name": "mail",
           "id": 199,
-          "order": 0
+          "order": 7,
+          "prevSize": 32,
+          "code": 61664,
+          "tempChar": ""
         },
         {
           "name": "linkedin",
@@ -1113,9 +1166,12 @@
           "order": 0
         },
         {
-          "name": "cloud-download",
+          "name": "download",
           "id": 212,
-          "order": 0
+          "order": 15,
+          "prevSize": 32,
+          "code": 61677,
+          "tempChar": ""
         },
         {
           "name": "cloud-upload",
@@ -1653,9 +1709,12 @@
           "order": 0
         },
         {
-          "name": "thumbs-up",
+          "name": "like",
           "id": 320,
-          "order": 0
+          "order": 26,
+          "prevSize": 32,
+          "code": 61796,
+          "tempChar": ""
         },
         {
           "name": "thumbs-down",
@@ -2140,7 +2199,10 @@
         {
           "name": "codepen",
           "id": 417,
-          "order": 0
+          "order": 12,
+          "prevSize": 32,
+          "code": 61899,
+          "tempChar": ""
         },
         {
           "name": "jsfiddle",
@@ -4511,7 +4573,7 @@
             "check-square-o"
           ],
           "defaultCode": 61510,
-          "grid": 14
+          "grid": 16
         },
         {
           "id": 71,
@@ -4811,7 +4873,7 @@
             "crosshairs"
           ],
           "defaultCode": 61531,
-          "grid": 14
+          "grid": 16
         },
         {
           "id": 91,
@@ -6144,7 +6206,7 @@
             "reorder"
           ],
           "defaultCode": 61641,
-          "grid": 14
+          "grid": 16
         },
         {
           "id": 179,
@@ -6339,7 +6401,7 @@
             "caret-down"
           ],
           "defaultCode": 61655,
-          "grid": 14
+          "grid": 16
         },
         {
           "id": 192,
@@ -6354,7 +6416,7 @@
             "caret-up"
           ],
           "defaultCode": 61656,
-          "grid": 14
+          "grid": 16
         },
         {
           "id": 193,
@@ -6462,7 +6524,7 @@
             "envelope"
           ],
           "defaultCode": 61664,
-          "grid": 14
+          "grid": 16
         },
         {
           "id": 200,
@@ -6662,7 +6724,7 @@
             "cloud-download"
           ],
           "defaultCode": 61677,
-          "grid": 14
+          "grid": 16
         },
         {
           "id": 213,
@@ -8301,7 +8363,7 @@
             "thumbs-up"
           ],
           "defaultCode": 61796,
-          "grid": 14
+          "grid": 16
         },
         {
           "id": 321,
@@ -9769,7 +9831,7 @@
             "codepen"
           ],
           "defaultCode": 61899,
-          "grid": 14
+          "grid": 16
         },
         {
           "id": 418,
@@ -13676,7 +13738,8 @@
           "defaultCode": 62176,
           "grid": 14
         }
-      ]
+      ],
+      "colorThemes": []
     },
     {
       "selection": [
@@ -16471,9 +16534,13 @@
           "id": 557
         },
         {
-          "order": 0,
+          "order": 29,
           "ligatures": "navigation",
-          "id": 558
+          "id": 558,
+          "prevSize": 32,
+          "code": 59655,
+          "name": "to-top",
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -16631,9 +16698,13 @@
           "id": 589
         },
         {
-          "order": 0,
+          "order": 21,
           "ligatures": "arrow_drop_down",
-          "id": 590
+          "id": 590,
+          "prevSize": 32,
+          "code": 59650,
+          "name": "arrow-down",
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -16641,9 +16712,13 @@
           "id": 591
         },
         {
-          "order": 0,
+          "order": 22,
           "ligatures": "arrow_drop_up",
-          "id": 592
+          "id": 592,
+          "prevSize": 32,
+          "code": 59651,
+          "name": "arrow-up",
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -16741,14 +16816,22 @@
           "id": 611
         },
         {
-          "order": 0,
+          "order": 23,
           "ligatures": "arrow_left",
-          "id": 612
+          "id": 612,
+          "prevSize": 32,
+          "code": 59652,
+          "name": "arrow-left",
+          "tempChar": ""
         },
         {
-          "order": 0,
+          "order": 24,
           "ligatures": "arrow_right",
-          "id": 613
+          "id": 613,
+          "prevSize": 32,
+          "code": 59653,
+          "name": "arrow-right",
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -26679,7 +26762,7 @@
           "tags": [
             "navigation"
           ],
-          "grid": 24
+          "grid": 16
         },
         {
           "id": 559,
@@ -27095,7 +27178,7 @@
           "tags": [
             "arrow_drop_down"
           ],
-          "grid": 24
+          "grid": 16
         },
         {
           "id": 591,
@@ -27121,7 +27204,7 @@
           "tags": [
             "arrow_drop_up"
           ],
-          "grid": 24
+          "grid": 16
         },
         {
           "id": 593,
@@ -27381,7 +27464,7 @@
           "tags": [
             "arrow_left"
           ],
-          "grid": 24
+          "grid": 16
         },
         {
           "id": 613,
@@ -27394,7 +27477,7 @@
           "tags": [
             "arrow_right"
           ],
-          "grid": 24
+          "grid": 16
         },
         {
           "id": 614,
@@ -35602,7 +35685,10 @@
           "ligatures": "heart, like",
           "name": "heart",
           "id": 218,
-          "order": 0
+          "order": 27,
+          "prevSize": 32,
+          "code": 59866,
+          "tempChar": ""
         },
         {
           "ligatures": "heart-broken, heart2",
@@ -36698,9 +36784,12 @@
         },
         {
           "ligatures": "facebook2, brand11",
-          "name": "facebook2",
+          "name": "facebook",
           "id": 401,
-          "order": 0
+          "order": 9,
+          "prevSize": 32,
+          "code": 60049,
+          "tempChar": ""
         },
         {
           "ligatures": "instagram, brand12",
@@ -36886,7 +36975,10 @@
           "ligatures": "github, brand40",
           "name": "github",
           "id": 432,
-          "order": 0
+          "order": 6,
+          "prevSize": 32,
+          "code": 60080,
+          "tempChar": ""
         },
         {
           "name": "npm",
@@ -37012,7 +37104,10 @@
           "ligatures": "skype, brand60",
           "name": "skype",
           "id": 453,
-          "order": 0
+          "order": 8,
+          "prevSize": 32,
+          "code": 60101,
+          "tempChar": ""
         },
         {
           "ligatures": "reddit, brand61",
@@ -37036,7 +37131,10 @@
           "ligatures": "linkedin, brand64",
           "name": "linkedin",
           "id": 457,
-          "order": 0
+          "order": 10,
+          "prevSize": 32,
+          "code": 60105,
+          "tempChar": ""
         },
         {
           "ligatures": "linkedin2, brand65",
@@ -45975,7 +46073,11 @@
         },
         {
           "id": 65,
-          "order": 0
+          "order": 28,
+          "prevSize": 32,
+          "code": 59654,
+          "name": "smile",
+          "tempChar": ""
         },
         {
           "id": 66,
@@ -48142,7 +48244,7 @@
           "tags": [
             "emoji-flirt"
           ],
-          "grid": 20
+          "grid": 16
         },
         {
           "id": 65,
@@ -64942,12 +65044,22 @@
     "showSVGs": true,
     "fontPref": {
       "prefix": "icon-",
-      "metadata": {},
+      "metadata": {
+        "fontFamily": "pkincom",
+        "majorVersion": 1,
+        "minorVersion": 0
+      },
       "metrics": {
         "emSize": 1024,
         "baseline": 6.25,
         "whitespace": 50
-      }
+      },
+      "embed": false,
+      "ie7": true,
+      "noie8": false,
+      "showSelector": false,
+      "selector": "i",
+      "showMetrics": false
     },
     "imagePref": {
       "prefix": "icon-",
@@ -64957,6 +65069,7 @@
       "bgColor": 16777215
     },
     "historySize": 50,
-    "gridSize": 16
+    "gridSize": 16,
+    "showGrid": true
   }
 }
