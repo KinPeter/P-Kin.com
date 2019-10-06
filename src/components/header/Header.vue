@@ -1,14 +1,30 @@
 <template>
-    <div id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/portfolio">Portfolio</router-link>
+<section id="header">
+    <div class="header-inner">
+        <div id="nav">
+            <router-link 
+                v-for="(navItem, i) in navItems" 
+                :key="i" 
+                :to="navItem.path">
+                {{ navItem.name | uppercase }}
+                </router-link>
+        </div>
     </div>
+</section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import { NavItem, HeaderData } from '@/interfaces/header';
 
 export default Vue.extend({
-
+    data(): HeaderData {
+        return {
+            navItems: [
+                { name: 'home', path: '/' },
+                { name: 'portfolio', path: '/portfolio' },
+            ],
+        };
+    },
 });
 </script>

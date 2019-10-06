@@ -1,0 +1,17 @@
+#header {
+
+    border: 1px solid $magenta;
+    .header-inner {
+        margin: 0 auto;
+        @extend %widthMedia;
+    }
+    #nav {
+        padding: 30px;
+        a {
+            font-family: "Montserrat-Light";
+            &.router-link-exact-active {
+                color: $magenta;
+            }
+        }
+    }
+}

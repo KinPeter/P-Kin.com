@@ -1,18 +1,36 @@
 @import './fonts';
 @import './variables';
+@import './shared';
 @import '../components/home/welcome-animation/welcome-animation';
+@import '../components/header/header';
+@import '../components/footer/footer';
 
+body {
+    padding: 0;
+    margin: 0;
+    background-color: $light;
+    color: $dark;
+}
+.site-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    main.router-view {
+        flex-grow: 1;
+        margin: 1rem auto;
+        border: 1px solid $magenta;
+        @extend %widthMedia;
 
-#nav {
-    padding: 30px;
-    a {
-        font-family: "Montserrat-Light";
-        color: #2c3e50;
-        &.router-link-exact-active {
-            color: $magenta;
-        }
     }
 }
+
+a {
+    text-decoration: none;
+    &:visited {
+        color: $dark;
+    }
+}
+
 h3 {
     font-family: "Muli-Light";
     font-weight: normal;

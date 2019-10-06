@@ -1,0 +1,11 @@
+footer {
+    background-color: $dark;
+    color: white;
+    height: 90px;
+
+    .footer-inner {
+        margin: 0 auto;
+        @extend %widthMedia;
+    }
+
+}
