@@ -1,5 +1,5 @@
 import { API_URL } from '@/shared';
-import { Skill } from '@/interfaces/skills';
+import { Skill } from '@/models/skills';
 import { ActionContext } from 'vuex';
 
 interface SkillState {

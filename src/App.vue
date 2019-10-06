@@ -23,7 +23,7 @@ export default Vue.extend({
         appFooter: FooterVue,
     },
     created() {
-        this.fetchSkills();
+        // this.fetchSkills();
     },
 });
 </script>

@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { NavItem, HeaderData } from '@/interfaces/header';
+import { NavItem, HeaderData } from '@/models/header';
 
 export default Vue.extend({
     data(): HeaderData {
