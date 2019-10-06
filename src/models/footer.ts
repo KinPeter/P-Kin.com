@@ -6,4 +6,5 @@ export interface ContactItem {
 
 export interface FooterData {
     contacts: ContactItem[];
+    selectedContact: string;
 }

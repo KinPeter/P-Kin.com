@@ -1,15 +1,13 @@
 @import './fonts';
 @import './variables';
 @import './shared';
-@import '../components/home/welcome-animation/welcome-animation';
-@import '../components/header/header';
-@import '../components/footer/footer';
 
 body {
     padding: 0;
     margin: 0;
     background-color: $light;
     color: $dark;
+    font-family: $mont-light;
 }
 .site-container {
     display: flex;
@@ -31,7 +29,6 @@ a {
     }
 }
 
-h3 {
-    font-family: "Muli-Light";
-    font-weight: normal;
-}
+@import '../components/home/welcome-animation/welcome-animation';
+@import '../components/header/header';
+@import '../components/footer/footer';

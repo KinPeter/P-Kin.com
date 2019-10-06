@@ -6,3 +6,9 @@
     @media (min-width: $lg) { width: 900px; }
     @media (min-width: $xl) { width: 1100px; }
 }
+
+%gradientText {
+    background: $gradient;
+    background-clip: text;
+    color: transparent;
+}
