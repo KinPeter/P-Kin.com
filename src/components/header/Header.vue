@@ -49,6 +49,7 @@ export default Vue.extend({
     box-shadow: 0 3px 3px rgba(0,0,0,0.5);
     transition: all .3s ease;
     position: relative;
+    z-index: 999;
 
     img {
         position: absolute;
