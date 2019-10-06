@@ -10,19 +10,30 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { mapActions } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 import HeaderVue from './components/header/Header.vue';
 import FooterVue from './components/footer/Footer.vue';
 
 export default Vue.extend({
+    computed: {
+        ...mapGetters(['scrolledHeader']),
+    },
     methods: {
-        ...mapActions(['fetchSkills']),
+        ...mapActions(['fetchSkills', 'headerScrolledDown', 'headerScrolledToTop']),
+        onScroll(): void {
+            if (window.scrollY >= 150 && !this.scrolledHeader) {
+                this.headerScrolledDown();
+            } else if (window.scrollY < 150 && this.scrolledHeader) {
+                this.headerScrolledToTop();
+            }
+        },
     },
     components: {
         appHeader: HeaderVue,
         appFooter: FooterVue,
     },
     created() {
+        window.addEventListener('scroll', this.onScroll);
         // this.fetchSkills();
     },
 });

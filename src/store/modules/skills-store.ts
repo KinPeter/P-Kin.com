@@ -23,7 +23,7 @@ const mutations = {
 };
 
 const actions = {
-    async fetchSkills(context: ActionContext<SkillState, SkillState>): Promise<void> {
+    async fetchSkills(context: ActionContext<any, any>): Promise<void> {
         try {
             const res: Response = await fetch(API_URL + 'skills.json');
             const data = await res.json();
