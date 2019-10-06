@@ -15,6 +15,7 @@ body {
     min-height: 100vh;
     main.router-view {
         flex-grow: 1;
+        height: 1200px;
         margin: 1rem auto;
         border: 1px solid $magenta;
         @extend %widthMedia;
@@ -28,7 +29,3 @@ a {
         color: $dark;
     }
 }
-
-@import '../components/home/welcome-animation/welcome-animation';
-@import '../components/header/header';
-@import '../components/footer/footer';
