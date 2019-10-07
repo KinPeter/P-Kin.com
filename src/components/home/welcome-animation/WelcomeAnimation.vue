@@ -1,5 +1,5 @@
 <template>
-<section>
+<section id="animation-container">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 211.667 64.214" id="welcome-animation">
   
     <path id="curly-left" class="default" 
@@ -86,10 +86,17 @@ export default Vue.extend({
 $defaultColor: $dark;
 $orangeColor: $orange;
 
+#animation-container {
+    text-align: center;
+}
+
 svg#welcome-animation {
-    width: 600px;
+    width: 250px;
     height: auto;
-    margin: 3rem 3rem 1rem;
+
+    @media (min-width: $md) {
+        width: 500px
+    }
     
     path { stroke: none; }
     .default, .default path { fill: $defaultColor }
@@ -261,15 +268,16 @@ svg#welcome-animation {
 }
 
 .frontend-development {
-    font-family: sans-serif;
+    font-family: $mont-reg;
     color: $orangeColor;
-    font-size: 2rem;
+    font-size: 1rem;
     span {
         display: inline-block;
         transform: translate(-200%, 100%) rotate(45deg);
         opacity: 0;
+        margin-right: .09rem;
         &:nth-child(8) {
-            margin-right: 1rem;
+            margin-right: .5rem;
         }
         animation: lettersIn .15s ease forwards;
         @for $i from 1 through 19 {
@@ -278,6 +286,16 @@ svg#welcome-animation {
             }
         }
     }
+    @media (min-width: $md) {
+        font-size: 1.8rem;
+        span {
+            margin-right: .3rem;
+            &:nth-child(8) {
+                margin-right: 1.4rem;
+            }
+        }
+    }
+
     @keyframes lettersIn {
         0%   { transform: translate(-200%, 200%) rotate(45deg); opacity: 0; }
         60%  { transform: translate(0, -20%) rotate(-5deg); opacity: 0.3; }
