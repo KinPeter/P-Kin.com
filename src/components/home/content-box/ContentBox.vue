@@ -30,6 +30,7 @@ export default Vue.extend({
         z-index: -1;
         border-radius: 5px;
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+        transition: all 2s ease;
     }
 }
 </style>

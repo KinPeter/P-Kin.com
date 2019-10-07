@@ -1,18 +1,18 @@
 <template>
     <section class="home">
+        <transition-group name="list" appear tag="div" >
+            <app-content-box v-if="!animationPlayed" key="box01">
+                <app-welcome-animation></app-welcome-animation>
+            </app-content-box>
 
-        <app-content-box v-if="!animationPlayed">
-            <app-welcome-animation></app-welcome-animation>
-        </app-content-box>
+            <app-content-box key="box02">
+                <app-about></app-about>
+            </app-content-box>
 
-        <app-content-box>
-            <app-about></app-about>
-        </app-content-box>
-
-        <app-content-box>
-            <app-skills></app-skills>
-        </app-content-box>
-
+            <app-content-box key="box03">
+                <app-skills></app-skills>
+            </app-content-box>
+        </transition-group>
     </section>
 </template>
 
@@ -47,3 +47,21 @@ export default Vue.extend({
     },
 });
 </script>
+
+<style lang="scss">
+.list-enter-active, .list-leave-active, .list-move {
+    transition: all .5s ease;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+    &:after {
+       opacity: 0;
+    }
+}
+.list-enter, .list-leave-to {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(10px);
+}
+.list-leave-active {
+    position: absolute;
+}
+</style>
