@@ -271,11 +271,12 @@ svg#welcome-animation {
     font-family: $mont-reg;
     color: $orangeColor;
     font-size: 1rem;
+    margin-top: 0.5rem;
     span {
         display: inline-block;
         transform: translate(-200%, 100%) rotate(45deg);
         opacity: 0;
-        margin-right: .09rem;
+        margin-right: .03rem;
         &:nth-child(8) {
             margin-right: .5rem;
         }
@@ -289,7 +290,7 @@ svg#welcome-animation {
     @media (min-width: $md) {
         font-size: 1.8rem;
         span {
-            margin-right: .3rem;
+            margin-right: .17rem;
             &:nth-child(8) {
                 margin-right: 1.4rem;
             }
