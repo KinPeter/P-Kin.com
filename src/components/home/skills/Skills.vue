@@ -1,6 +1,6 @@
 <template>
     <section>
-        <h3>This is Skills section</h3>
+        <h3 class="box-title">Tech stack</h3>
     </section>
 </template>
 
