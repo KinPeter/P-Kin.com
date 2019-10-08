@@ -60,17 +60,3 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="scss">
-.cbox-enter-active, .cbox-leave-active {
-    transition: all .5s ease;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
-    &:after {
-       opacity: 0;
-    }
-}
-.cbox-enter, .cbox-leave-to {
-    opacity: 0;
-    transform: translateY(20px);
-    filter: blur(10px);
-}
-</style>
