@@ -18,5 +18,9 @@ export default new Router({
             name: 'Portfolio',
             component: () => import('./views/Portfolio.vue'),
         },
+        {
+            path: '*',
+            redirect: '/',
+        },
     ],
 });
