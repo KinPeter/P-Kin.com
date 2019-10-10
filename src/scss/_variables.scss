@@ -23,6 +23,7 @@ $grad10: #FF8A00;
 
 $gradient: linear-gradient(to right, $orange, $magenta);
 $gradient-reverse: linear-gradient(to left, $orange, $magenta);
+$gradient-topdown: linear-gradient(to bottom, $orange, $magenta);
 
 $mont-light: "Montserrat-Light", sans-serif;
 $mont-reg: "Montserrat-Regular", sans-serif;

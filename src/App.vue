@@ -1,6 +1,9 @@
 <template>
     <div class="site-container">
         <app-header></app-header>
+        <transition name="side-blur-out">
+            <app-side-drawer v-if="sideDrawerOpen"></app-side-drawer>
+        </transition>
         <main class="router-view">
             <router-view/>
         </main>
@@ -13,10 +16,11 @@ import Vue from 'vue';
 import { mapActions, mapGetters } from 'vuex';
 import HeaderVue from './components/header/Header.vue';
 import FooterVue from './components/footer/Footer.vue';
+import SideDrawerVue from './components/side-drawer/SideDrawer.vue';
 
 export default Vue.extend({
     computed: {
-        ...mapGetters(['scrolledHeader']),
+        ...mapGetters(['scrolledHeader', 'sideDrawerOpen']),
     },
     methods: {
         ...mapActions(['fetchSkills', 'headerScrolledDown', 'headerScrolledToTop']),
@@ -31,6 +35,7 @@ export default Vue.extend({
     components: {
         appHeader: HeaderVue,
         appFooter: FooterVue,
+        appSideDrawer: SideDrawerVue,
     },
     created() {
         window.addEventListener('scroll', this.onScroll);

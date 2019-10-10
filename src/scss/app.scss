@@ -52,3 +52,26 @@ a {
     transform: translateY(20px);
     filter: blur(10px);
 }
+
+
+.side-fade-enter-active, .side-fade-leave-active {
+    opacity: 1;
+}
+.side-fade-enter, .side-fade-leave-to {
+    opacity: 0;
+}
+.side-slide-enter-active, .side-slide-leave-active {
+    transform: translateX(0);
+}
+.side-slide-enter, .side-slide-leave-to {
+    transform: translateX(-100%);
+}
+.side-blur-out-leave-active {
+    opacity: 1;
+    filter: blur(0);
+    transition: all .3s ease;
+}
+.side-blur-out-leave-to {
+    opacity: 0;
+    filter: blur(10px);
+}

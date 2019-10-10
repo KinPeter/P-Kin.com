@@ -10,6 +10,9 @@
                 :key="i" 
                 :to="navItem.path">{{ navItem.name | uppercase }}</router-link>
         </div>
+        <div id="burger" @click="openSideDrawer">
+            <i class="icon-burger"></i>
+        </div>
         <i class="icon-p-logo" @click="$router.push('/')"></i>
     </div>
 </section>
@@ -17,23 +20,18 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { mapGetters } from 'vuex';
-import { NavItem, HeaderData } from '@/models/header';
+import { mapGetters, mapActions } from 'vuex';
+import { NavItem } from '@/models/header';
 
 export default Vue.extend({
-    data(): HeaderData {
-        return {
-            navItems: [
-                { name: 'home', path: '/' },
-                { name: 'portfolio', path: '/portfolio' },
-            ],
-        };
-    },
     computed: {
-        ...mapGetters(['scrolledHeader']),
+        ...mapGetters(['scrolledHeader', 'navItems']),
         onMobile(): boolean {
             return window.innerWidth < 576;
         },
+    },
+    methods: {
+        ...mapActions(['openSideDrawer']),
     },
 });
 </script>
@@ -82,6 +80,10 @@ export default Vue.extend({
         }
         #nav {
             position: relative;
+            display: none;
+            @media (min-width: $sm) {
+                display: block;
+            }
             a {
                 font-family: $mont-reg;
                 font-size: 1.2rem;
@@ -112,6 +114,15 @@ export default Vue.extend({
                         display: none;
                     }
                 }
+            }
+        }
+        #burger {
+            display: block;
+            @media (min-width: $sm) {
+                display: none;
+            }
+            i {
+                color: $dark;
             }
         }
     }
