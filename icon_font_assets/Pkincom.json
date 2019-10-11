@@ -527,9 +527,12 @@
           "order": 0
         },
         {
-          "name": "info-circle",
+          "name": "info",
           "id": 89,
-          "order": 0
+          "order": 30,
+          "prevSize": 32,
+          "code": 61530,
+          "tempChar": ""
         },
         {
           "name": "goal",
@@ -537,7 +540,7 @@
           "order": 25,
           "prevSize": 32,
           "code": 61531,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "times-circle-o",
@@ -590,9 +593,12 @@
           "order": 0
         },
         {
-          "name": "exclamation-circle",
+          "name": "error",
           "id": 101,
-          "order": 0
+          "order": 31,
+          "prevSize": 32,
+          "code": 61546,
+          "tempChar": ""
         },
         {
           "name": "gift",
@@ -980,7 +986,7 @@
           "order": 14,
           "prevSize": 32,
           "code": 61641,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "list-ul",
@@ -1103,7 +1109,7 @@
           "order": 7,
           "prevSize": 32,
           "code": 61664,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "linkedin",
@@ -1171,7 +1177,7 @@
           "order": 15,
           "prevSize": 32,
           "code": 61677,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "cloud-upload",
@@ -1714,7 +1720,7 @@
           "order": 26,
           "prevSize": 32,
           "code": 61796,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "thumbs-down",
@@ -2202,7 +2208,7 @@
           "order": 12,
           "prevSize": 32,
           "code": 61899,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "jsfiddle",
@@ -4858,7 +4864,7 @@
             "info-circle"
           ],
           "defaultCode": 61530,
-          "grid": 14
+          "grid": 16
         },
         {
           "id": 90,
@@ -5039,7 +5045,7 @@
             "exclamation-circle"
           ],
           "defaultCode": 61546,
-          "grid": 14
+          "grid": 16
         },
         {
           "id": 102,
@@ -16540,7 +16546,7 @@
           "prevSize": 32,
           "code": 59655,
           "name": "to-top",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -16704,7 +16710,7 @@
           "prevSize": 32,
           "code": 59650,
           "name": "arrow-down",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -16718,7 +16724,7 @@
           "prevSize": 32,
           "code": 59651,
           "name": "arrow-up",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -16822,7 +16828,7 @@
           "prevSize": 32,
           "code": 59652,
           "name": "arrow-left",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 24,
@@ -16831,7 +16837,7 @@
           "prevSize": 32,
           "code": 59653,
           "name": "arrow-right",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -35688,7 +35694,7 @@
           "order": 27,
           "prevSize": 32,
           "code": 59866,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "heart-broken, heart2",
@@ -36789,7 +36795,7 @@
           "order": 9,
           "prevSize": 32,
           "code": 60049,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "instagram, brand12",
@@ -36978,7 +36984,7 @@
           "order": 6,
           "prevSize": 32,
           "code": 60080,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "npm",
@@ -37107,7 +37113,7 @@
           "order": 8,
           "prevSize": 32,
           "code": 60101,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "reddit, brand61",
@@ -37134,7 +37140,7 @@
           "order": 10,
           "prevSize": 32,
           "code": 60105,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "linkedin2, brand65",
@@ -46077,7 +46083,7 @@
           "prevSize": 32,
           "code": 59654,
           "name": "smile",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 66,
@@ -65055,11 +65061,12 @@
         "whitespace": 50
       },
       "embed": false,
-      "ie7": true,
+      "ie7": false,
       "noie8": false,
       "showSelector": false,
       "selector": "i",
-      "showMetrics": false
+      "showMetrics": false,
+      "showVersion": false
     },
     "imagePref": {
       "prefix": "icon-",

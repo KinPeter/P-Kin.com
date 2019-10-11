@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'pkincom';
-  src:  url('fonts/pkincom.eot?ds5d0x');
-  src:  url('fonts/pkincom.eot?ds5d0x#iefix') format('embedded-opentype'),
-    url('fonts/pkincom.ttf?ds5d0x') format('truetype'),
-    url('fonts/pkincom.woff?ds5d0x') format('woff'),
-    url('fonts/pkincom.svg?ds5d0x#pkincom') format('svg');
+  src:  url('fonts/pkincom.eot?1tz4p8');
+  src:  url('fonts/pkincom.eot?1tz4p8#iefix') format('embedded-opentype'),
+    url('fonts/pkincom.ttf?1tz4p8') format('truetype'),
+    url('fonts/pkincom.woff?1tz4p8') format('woff'),
+    url('fonts/pkincom.svg?1tz4p8#pkincom') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -34,8 +34,14 @@ i {
 .icon-check:before {
   content: "\f046";
 }
+.icon-info:before {
+  content: "\f05a";
+}
 .icon-goal:before {
   content: "\f05b";
+}
+.icon-error:before {
+  content: "\f06a";
 }
 .icon-burger:before {
   content: "\f0c9";
