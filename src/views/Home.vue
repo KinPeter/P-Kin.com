@@ -25,7 +25,7 @@ import { mapGetters, mapActions } from 'vuex';
 import AboutVue from '../components/home/about/About.vue';
 import SkillsVue from '../components/home/skills/Skills.vue';
 import WelcomeAnimationVue from '../components/home/welcome-animation/WelcomeAnimation.vue';
-import ContentBoxVue from '../components/home/content-box/ContentBox.vue';
+import ContentBoxVue from '../components/content-box/ContentBox.vue';
 
 export default Vue.extend({
     name: 'home',

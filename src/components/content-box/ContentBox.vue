@@ -11,7 +11,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-@import '../../../scss/variables';
+@import '../../scss/variables';
 
 .content-box {
     position: relative;
