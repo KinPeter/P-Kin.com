@@ -16,5 +16,11 @@ export default Vue.extend({
         appPortfolioGrid: PortfolioGridVue,
         appPortfolioFilters: PortfolioFiltersVue,
     },
+    created() {
+        if (!this.$store.getters.portfolioLoaded) {
+            // this.$store.dispatch('fetchPortfolioFilters');
+            // this.$store.dispatch('fetchPortfolioItems');
+        }
+    },
 });
 </script>

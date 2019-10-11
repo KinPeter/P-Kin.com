@@ -353,3 +353,14 @@ const portfolio = [
     "addedAt": 1549411200000
 }
 ];
+
+const axios = require('axios');
+const url = 'https://p-kin-com.firebaseio.com/portfolio-items.json';
+
+portfolio.forEach((item) => {
+    axios.post(url, item)
+    .then((res) => {
+        console.log(res);
+    });
+});
+
