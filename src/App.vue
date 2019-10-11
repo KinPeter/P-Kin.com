@@ -1,5 +1,6 @@
 <template>
     <div class="site-container">
+        <app-spinner v-if="isLoading"></app-spinner>
         <app-header></app-header>
         <transition name="side-blur-out">
             <app-side-drawer v-if="sideDrawerOpen"></app-side-drawer>
@@ -17,10 +18,11 @@ import { mapActions, mapGetters } from 'vuex';
 import HeaderVue from './components/header/Header.vue';
 import FooterVue from './components/footer/Footer.vue';
 import SideDrawerVue from './components/side-drawer/SideDrawer.vue';
+import SpinnerVue from './components/spinner/Spinner.vue';
 
 export default Vue.extend({
     computed: {
-        ...mapGetters(['scrolledHeader', 'sideDrawerOpen']),
+        ...mapGetters(['scrolledHeader', 'sideDrawerOpen', 'isLoading']),
     },
     methods: {
         ...mapActions(['fetchSkills', 'headerScrolledDown', 'headerScrolledToTop']),
@@ -36,10 +38,11 @@ export default Vue.extend({
         appHeader: HeaderVue,
         appFooter: FooterVue,
         appSideDrawer: SideDrawerVue,
+        appSpinner: SpinnerVue,
     },
     created() {
         window.addEventListener('scroll', this.onScroll);
-        // this.fetchSkills();
+        this.fetchSkills();
     },
 });
 </script>

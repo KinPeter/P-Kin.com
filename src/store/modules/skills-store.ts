@@ -1,6 +1,5 @@
-import { API_URL } from '@/shared';
+import { API_URL, Context } from '@/shared';
 import { Skill } from '@/models/skills';
-import { ActionContext } from 'vuex';
 
 interface SkillState {
     skills: Skill[];
@@ -11,19 +10,20 @@ const state: SkillState = {
 };
 
 const getters = {
-    skills(ss: SkillState): Skill[] {
-        return ss.skills;
+    skills(st: SkillState): Skill[] {
+        return st.skills;
     },
 };
 
 const mutations = {
-    setSkills(ss: SkillState, skills: Skill[]): void {
-        ss.skills = skills;
+    setSkills(st: SkillState, skills: Skill[]): void {
+        st.skills = skills;
     },
 };
 
 const actions = {
-    async fetchSkills(context: ActionContext<any, any>): Promise<void> {
+    async fetchSkills(context: Context): Promise<void> {
+        context.dispatch('loadingStart');
         try {
             const res: Response = await fetch(API_URL + 'skills.json');
             const data = await res.json();
@@ -31,7 +31,7 @@ const actions = {
         } catch (error) {
             // handle error
         } finally {
-            // loading-false
+            context.dispatch('loadingFinish');
         }
     },
 };

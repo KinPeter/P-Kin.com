@@ -1,6 +1,5 @@
-import { API_URL } from '@/shared';
+import { API_URL, Context } from '@/shared';
 import { PortfolioItem } from './../../models/portfolio';
-import { ActionContext } from 'vuex';
 
 const transformPortfolioItems = (data: any): PortfolioItem[] => {
     const rawArray: PortfolioItem[] = Object.values(data);
@@ -54,7 +53,8 @@ const mutations = {
 };
 
 const actions = {
-    async fetchPortfolioFilters(context: ActionContext<any, any>): Promise<void> {
+    async fetchPortfolioFilters(context: Context): Promise<void> {
+        context.dispatch('loadingStart');
         try {
             const res: Response = await fetch(API_URL + 'portfolio-badges.json');
             const data: string[] = await res.json();
@@ -62,10 +62,11 @@ const actions = {
         } catch (error) {
             // handle error
         } finally {
-            // loading-false
+            context.dispatch('loadingFinish');
         }
     },
-    async fetchPortfolioItems(context: ActionContext<any, any>): Promise<void> {
+    async fetchPortfolioItems(context: Context): Promise<void> {
+        context.dispatch('loadingStart');
         try {
             const res: Response = await fetch(API_URL + 'portfolio-items.json');
             const data: any = await res.json();
@@ -73,10 +74,10 @@ const actions = {
         } catch (error) {
             // handle error
         } finally {
-            // loading-false
+            context.dispatch('loadingFinish');
         }
     },
-    filterPortfolio(context: ActionContext<any, any>, filter: string): void {
+    filterPortfolio(context: Context, filter: string): void {
         context.commit('filterItems', filter);
     },
 };

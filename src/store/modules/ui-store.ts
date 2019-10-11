@@ -1,7 +1,8 @@
-import { ActionContext } from 'vuex';
 import { NavItem } from '@/models/header';
+import { Context } from '../../shared';
 
 interface UIState {
+    loadingProgress: boolean[];
     scrolledHeader: boolean;
     animationPlayed: boolean;
     navItems: NavItem[];
@@ -9,6 +10,7 @@ interface UIState {
 }
 
 const state: UIState = {
+    loadingProgress: [],
     scrolledHeader: false,
     animationPlayed: false,
     navItems: [
@@ -32,6 +34,9 @@ const getters = {
     sideDrawerOpen(st: UIState): boolean {
         return st.sideDrawerOpen;
     },
+    isLoading(st: UIState): boolean {
+        return st.loadingProgress.length !== 0;
+    },
 };
 
 const mutations = {
@@ -44,23 +49,40 @@ const mutations = {
     setSideDrawerOpen(st: UIState, value: boolean): void {
         st.sideDrawerOpen = value;
     },
+    addToLoading(st: UIState): void {
+        const newProgress = [...st.loadingProgress, true];
+        st.loadingProgress = newProgress;
+    },
+    removeFromLoading(st: UIState): void {
+        if (st.loadingProgress.length > 0) {
+            const newProgress = [...st.loadingProgress];
+            newProgress.pop();
+            st.loadingProgress = newProgress;
+        }
+    },
 };
 
 const actions = {
-    headerScrolledDown(context: ActionContext<any, any>): void {
+    headerScrolledDown(context: Context): void {
         context.commit('setScrolledHeader', true);
     },
-    headerScrolledToTop(context: ActionContext<any, any>): void {
+    headerScrolledToTop(context: Context): void {
         context.commit('setScrolledHeader', false);
     },
-    animationHasBeenPlayed(context: ActionContext<any, any>): void {
+    animationHasBeenPlayed(context: Context): void {
         context.commit('setAnimationPlayed');
     },
-    openSideDrawer(context: ActionContext<any, any>): void {
+    openSideDrawer(context: Context): void {
         context.commit('setSideDrawerOpen', true);
     },
-    closeSideDrawer(context: ActionContext<any, any>): void {
+    closeSideDrawer(context: Context): void {
         context.commit('setSideDrawerOpen', false);
+    },
+    loadingStart(context: Context): void {
+        context.commit('addToLoading');
+    },
+    loadingFinish(context: Context): void {
+        context.commit('removeFromLoading');
     },
 };
 
