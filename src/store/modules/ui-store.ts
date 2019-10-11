@@ -14,6 +14,7 @@ const state: UIState = {
     navItems: [
         { name: 'home', path: '/' },
         { name: 'portfolio', path: '/portfolio' },
+        { name: 'pens', path: '/pens' },
     ],
     sideDrawerOpen: false,
 };

@@ -19,6 +19,11 @@ export default new Router({
             component: () => import('./views/Portfolio.vue'),
         },
         {
+            path: '/pens',
+            name: 'Pens',
+            component: () => import('./views/Pens.vue'),
+        },
+        {
             path: '*',
             redirect: '/',
         },
