@@ -2,7 +2,7 @@
     font-family: "Montserrat-Light";
     src: url("./assets/fonts/Montserrat-Light.eot"); /* IE9 Compat Modes */
     src: url("./assets/fonts/Montserrat-Light.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-         url("./assets/fonts/Montserrat-Light.ttf") format("truetype"), /* Safari, Android, iOS */
+         /*url("./assets/fonts/Montserrat-Light.ttf") format("truetype"), /* Safari, Android, iOS */
          url("./assets/fonts/Montserrat-Light.woff") format("woff"), /* Modern Browsers */
          url("./assets/fonts/Montserrat-Light.woff2") format("woff2"); /* Modern Browsers */
     font-weight: normal;
@@ -13,7 +13,7 @@
     font-family: "Montserrat-Regular";
     src: url("./assets/fonts/Montserrat-Regular.eot"); /* IE9 Compat Modes */
     src: url("./assets/fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-         url("./assets/fonts/Montserrat-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+         /*url("./assets/fonts/Montserrat-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
          url("./assets/fonts/Montserrat-Regular.woff") format("woff"), /* Modern Browsers */
          url("./assets/fonts/Montserrat-Regular.woff2") format("woff2"); /* Modern Browsers */
     font-weight: normal;
@@ -24,42 +24,9 @@
     font-family: "Montserrat-Bold";
     src: url("./assets/fonts/Montserrat-Bold.eot"); /* IE9 Compat Modes */
     src: url("./assets/fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-         url("./assets/fonts/Montserrat-Bold.ttf") format("truetype"), /* Safari, Android, iOS */
+         /*url("./assets/fonts/Montserrat-Bold.ttf") format("truetype"), /* Safari, Android, iOS */
          url("./assets/fonts/Montserrat-Bold.woff") format("woff"), /* Modern Browsers */
          url("./assets/fonts/Montserrat-Bold.woff2") format("woff2"); /* Modern Browsers */
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Muli-Light";
-    src: url("./assets/fonts/Muli-Light.eot"); /* IE9 Compat Modes */
-    src: url("./assets/fonts/Muli-Light.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-         url("./assets/fonts/Muli-Light.ttf") format("truetype"), /* Safari, Android, iOS */
-         url("./assets/fonts/Muli-Light.woff") format("woff"), /* Modern Browsers */
-         url("./assets/fonts/Muli-Light.woff2") format("woff2"); /* Modern Browsers */
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Muli-Regular";
-    src: url("./assets/fonts/Muli-Regular.eot"); /* IE9 Compat Modes */
-    src: url("./assets/fonts/Muli-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-         url("./assets/fonts/Muli-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
-         url("./assets/fonts/Muli-Regular.woff") format("woff"), /* Modern Browsers */
-         url("./assets/fonts/Muli-Regular.woff2") format("woff2"); /* Modern Browsers */
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Muli-Bold";
-    src: url("./assets/fonts/Muli-Bold.eot"); /* IE9 Compat Modes */
-    src: url("./assets/fonts/Muli-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-         url("./assets/fonts/Muli-Bold.ttf") format("truetype"), /* Safari, Android, iOS */
-         url("./assets/fonts/Muli-Bold.woff") format("woff"), /* Modern Browsers */
-         url("./assets/fonts/Muli-Bold.woff2") format("woff2"); /* Modern Browsers */
     font-weight: normal;
     font-style: normal;
 }

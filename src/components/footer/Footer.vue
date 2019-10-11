@@ -117,9 +117,9 @@ footer {
                 &:nth-of-type(2) {
                     margin-top: .1rem;
                     display: inline-block;
-                    font-family: $muli-bold;
+                    font-family: $mont-reg;
                     @extend %gradientText;
-                    font-size: 1rem;
+                    font-size: 1.05rem;
                 }
             }
             a {
