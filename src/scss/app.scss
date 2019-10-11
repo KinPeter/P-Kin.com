@@ -1,6 +1,7 @@
 @import './fonts';
 @import './variables';
 @import './shared';
+@import './transitions';
 
 body {
     padding: 0;
@@ -33,52 +34,4 @@ a {
     font-family: $mont-light;
     font-size: 1.25rem;
     margin-top: -.5rem;
-}
-
-
-
-/*
-* VUE TRANSITION CLASSES
-*/
-.cbox-enter-active, .cbox-leave-active {
-    transition: all .5s ease;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
-    &:after {
-       opacity: 0;
-    }
-}
-.cbox-enter, .cbox-leave-to {
-    opacity: 0;
-    transform: translateY(20px);
-    filter: blur(10px);
-}
-
-
-.side-fade-enter-active, .side-fade-leave-active {
-    opacity: 1;
-}
-.side-fade-enter, .side-fade-leave-to {
-    opacity: 0;
-}
-.side-slide-enter-active, .side-slide-leave-active {
-    transform: translateX(0);
-}
-.side-slide-enter, .side-slide-leave-to {
-    transform: translateX(-100%);
-}
-.side-blur-out-leave-active {
-    opacity: 1;
-    filter: blur(0);
-    transition: all .3s ease;
-}
-.side-blur-out-leave-to {
-    opacity: 0;
-    filter: blur(10px);
-}
-.error-dialog-enter-active, .error-dialog-leave-active {
-    transform: translateX(0);
-    transition: transform .3s ease;
-}
-.error-dialog-enter, .error-dialog-leave-to {
-    transform: translateX(-100%);
 }
