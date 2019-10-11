@@ -58,6 +58,7 @@ const actions = {
         try {
             const res: Response = await fetch(API_URL + 'portfolio-badges.json');
             const data: string[] = await res.json();
+            if (!data) { throw new Error(); }
             context.commit('setPortfolioFilters', data);
         } catch (error) {
             context.dispatch('errorOccured', 'Sorry, unable to fetch data. Please try again later.');
@@ -70,6 +71,7 @@ const actions = {
         try {
             const res: Response = await fetch(API_URL + 'portfolio-items.json');
             const data: any = await res.json();
+            if (!data) { throw new Error(); }
             context.commit('setPortfolioItems', transformPortfolioItems(data));
         } catch (error) {
             context.dispatch('errorOccured', 'Sorry, unable to fetch data. Please try again later.');

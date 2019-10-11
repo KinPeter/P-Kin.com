@@ -14,7 +14,7 @@
         <main class="router-view">
             <router-view/>
         </main>
-        
+
         <app-footer></app-footer>
     </div>
 </template>
@@ -30,10 +30,10 @@ import ErrorDialogVue from './components/error-dialog/ErrorDialog.vue';
 
 export default Vue.extend({
     computed: {
-        ...mapGetters(['scrolledHeader', 'sideDrawerOpen', 'isLoading', 'hasError']),
+        ...mapGetters(['scrolledHeader', 'sideDrawerOpen', 'isLoading', 'hasError', 'skillsLoaded']),
     },
     methods: {
-        ...mapActions(['fetchSkills', 'headerScrolledDown', 'headerScrolledToTop']),
+        ...mapActions(['fetchSkills', 'fetchOtherTechs', 'headerScrolledDown', 'headerScrolledToTop']),
         onScroll(): void {
             if (window.scrollY >= 150 && !this.scrolledHeader) {
                 this.headerScrolledDown();
@@ -51,7 +51,10 @@ export default Vue.extend({
     },
     created() {
         window.addEventListener('scroll', this.onScroll);
-        this.fetchSkills();
+        if (!this.skillsLoaded) {
+            this.fetchSkills();
+            this.fetchOtherTechs();
+        }
     },
 });
 </script>
