@@ -58,7 +58,7 @@ const actions = {
             const res: Response = await fetch(API_URL + 'other-techs.json');
             const data = await res.json();
             if (!data) { throw new Error(); }
-            context.commit('setoOtherTechs', data);
+            context.commit('setOtherTechs', data);
         } catch (error) {
             context.dispatch('errorOccured', 'Sorry, unable to fetch data. Please try again later.');
         } finally {
