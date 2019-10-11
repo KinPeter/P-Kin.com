@@ -29,7 +29,7 @@ const actions = {
             const data = await res.json();
             context.commit('setSkills', data);
         } catch (error) {
-            // handle error
+            context.dispatch('errorOccured', 'Sorry, unable to fetch data. Please try again later.');
         } finally {
             context.dispatch('loadingFinish');
         }

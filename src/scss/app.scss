@@ -75,3 +75,10 @@ a {
     opacity: 0;
     filter: blur(10px);
 }
+.error-dialog-enter-active, .error-dialog-leave-active {
+    transform: translateX(0);
+    transition: transform .3s ease;
+}
+.error-dialog-enter, .error-dialog-leave-to {
+    transform: translateX(-100%);
+}

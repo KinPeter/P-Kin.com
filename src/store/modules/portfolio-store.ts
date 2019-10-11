@@ -60,7 +60,7 @@ const actions = {
             const data: string[] = await res.json();
             context.commit('setPortfolioFilters', data);
         } catch (error) {
-            // handle error
+            context.dispatch('errorOccured', 'Sorry, unable to fetch data. Please try again later.');
         } finally {
             context.dispatch('loadingFinish');
         }
@@ -72,7 +72,7 @@ const actions = {
             const data: any = await res.json();
             context.commit('setPortfolioItems', transformPortfolioItems(data));
         } catch (error) {
-            // handle error
+            context.dispatch('errorOccured', 'Sorry, unable to fetch data. Please try again later.');
         } finally {
             context.dispatch('loadingFinish');
         }
