@@ -61,19 +61,30 @@ section#skillbar {
             margin-bottom: 0px;
             margin-right: 5px;
             border-radius: 2px;
+            opacity: 0;
+            animation: bars-right .3s ease forwards;
         }
         @for $i from 1 through 10 {
             .bar-#{$i} {
                 background-color: nth($gradColors, $i);
+                animation-delay: 1s + $i / 10 !important;
             }
         }
+    }
+
+    @keyframes bars-up {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0) }
+    }
+    @keyframes bars-right {
+        from { opacity: 0; transform: translateX(-10px); }
+        to   { opacity: 1; transform: translateX(0) }
     }
 
     @media (min-width: $sm) {
         width: 120px;
         height: 120px;
         text-align: center;
-        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
@@ -88,19 +99,13 @@ section#skillbar {
         .bars {
             width: auto;
             margin-bottom: .3rem;
-            display: flex;
             flex-direction: column-reverse;
             .bar {
                 width: 60px;
                 height: 4px;
                 margin-bottom: 4px;
                 margin-right: 0;
-                border-radius: 2px;
-            }
-            @for $i from 1 through 10 {
-                .bar-#{$i} {
-                    background-color: nth($gradColors, $i);
-                }
+                animation: bars-up .3s ease forwards;
             }
         }
     }

@@ -73,6 +73,11 @@ section#about {
                 }
             }
         }
+        @media (max-width: $sm) {
+            ul li {
+                margin-bottom: .5rem;
+            }
+        }
         @media (min-width: $lg) {
             flex-direction: row;
             justify-content: space-around;
