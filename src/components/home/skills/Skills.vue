@@ -8,6 +8,17 @@
                 :skill="skill">
             </app-skillbar>
         </div>
+        <div class="other-techs-container">
+            <h4 class="sub-title">Other related technologies I'm familiar with, or have some experience with:</h4>
+            <ul>
+                <li
+                    v-for="(tech, i) in otherTechs"
+                    :key="tech">
+                    <span class="tech">{{ tech }}</span>
+                    <span v-if="i < otherTechs.length-1">|</span>                    
+                </li>
+            </ul>
+        </div>
     </section>
 </template>
 
@@ -21,7 +32,7 @@ export default Vue.extend({
         appSkillbar: SkillbarVue,
     },
     computed: {
-        ...mapGetters(['skills']),
+        ...mapGetters(['skills', 'otherTechs']),
     },
 
 });
@@ -33,5 +44,23 @@ export default Vue.extend({
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
+}
+.other-techs-container {
+    margin-top: 2rem;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1rem 0 0 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        li {
+            display: inline-block;
+            span.tech {
+                display: inline-block;
+                margin: .2rem .5rem;
+            }
+        }
+    }
 }
 </style>

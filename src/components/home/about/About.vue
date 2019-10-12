@@ -48,10 +48,6 @@ section#about {
         flex-direction: column;
         justify-content: center;
         article {
-            .sub-title {
-                margin: 0 0 .5rem;
-                color: $orange;
-            }
             &:nth-of-type(2) {
                 margin-top: 1rem;
             }
