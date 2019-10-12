@@ -21,6 +21,8 @@ $grad8: #FB7C13;
 $grad9: #FD8408;
 $grad10: #FF8A00;
 
+$gradColors: $grad10, $grad9, $grad8, $grad7, $grad6, $grad5, $grad4, $grad3, $grad2, $grad1;
+
 $gradient: linear-gradient(to right, $orange, $magenta);
 $gradient-reverse: linear-gradient(to left, $orange, $magenta);
 $gradient-topdown: linear-gradient(to bottom, $orange, $magenta);
