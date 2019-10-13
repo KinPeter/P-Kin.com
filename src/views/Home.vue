@@ -22,9 +22,9 @@
 <script lang="ts">
 import Vue from 'vue';
 import { mapGetters, mapActions } from 'vuex';
-import AboutVue from '../components/home/about/About.vue';
-import SkillsVue from '../components/home/skills/Skills.vue';
-import WelcomeAnimationVue from '../components/home/welcome-animation/WelcomeAnimation.vue';
+import AboutVue from '../components/home/About.vue';
+import SkillsVue from '../components/home/Skills.vue';
+import WelcomeAnimationVue from '../components/home/WelcomeAnimation.vue';
 import ContentBoxVue from '../components/content-box/ContentBox.vue';
 
 export default Vue.extend({

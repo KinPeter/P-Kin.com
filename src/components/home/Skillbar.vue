@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { Skill } from '../../../models/skills';
+import { Skill } from '../../models/skills';
 
 export default Vue.extend({
     props: {
@@ -31,7 +31,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-@import '../../../scss/variables';
+@import '../../scss/variables';
 
 section#skillbar {
     width: 100%;

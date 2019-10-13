@@ -39,8 +39,8 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-@import '../../../scss/variables';
-@import '../../../scss/shared';
+@import '../../scss/variables';
+@import '../../scss/shared';
 
 section#about {
     .about-flex {
@@ -58,7 +58,7 @@ section#about {
             margin: 1rem 1rem 0 0;
             z-index: 1;
             .img {
-                background: url(../../../assets/images/me.jpg);
+                background: url(../../assets/images/me.jpg);
                 width: 80px;
                 height: 80px;
                 background-size: contain;
