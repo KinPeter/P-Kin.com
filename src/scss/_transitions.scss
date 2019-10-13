@@ -10,8 +10,6 @@
     transform: translateY(20px);
     filter: blur(10px);
 }
-
-
 .side-fade-enter-active, .side-fade-leave-active {
     opacity: 1;
 }
@@ -39,4 +37,12 @@
 }
 .error-dialog-enter, .error-dialog-leave-to {
     transform: translateX(-100%);
+}
+.filters-enter-active, .filters-leave-active {
+    transition: all .5s ease;
+}
+.filters-enter, .filters-leave-to {
+    opacity: 0;
+    transform: translateY(-20px);
+    filter: blur(10px);
 }

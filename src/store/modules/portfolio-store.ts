@@ -17,7 +17,7 @@ interface PortfolioState {
 
 const state: PortfolioState = {
     portfolioItems: [],
-    portfolioFilters: [],
+    portfolioFilters: ['All'],
     filteredPortfolio: [],
     filtersLoaded: false,
     itemsLoaded: false,
@@ -37,7 +37,7 @@ const getters = {
 
 const mutations = {
     setPortfolioFilters(st: PortfolioState, filters: string[]): void {
-        st.portfolioFilters = filters;
+        st.portfolioFilters = [...st.portfolioFilters, ...filters];
         st.filtersLoaded = true;
     },
     setPortfolioItems(st: PortfolioState, portfolio: PortfolioItem[]): void {
@@ -46,9 +46,13 @@ const mutations = {
         st.itemsLoaded = true;
     },
     filterItems(st: PortfolioState, filter: string): void {
-        st.filteredPortfolio = st.portfolioItems.filter((item) => {
-            return item.badges.includes(filter);
-        });
+        if (filter === 'All') {
+            st.filteredPortfolio = [...st.portfolioItems];
+        } else {
+            st.filteredPortfolio = st.portfolioItems.filter((item) => {
+                return item.badges.includes(filter);
+            });
+        }
     },
 };
 
