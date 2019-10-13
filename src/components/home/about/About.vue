@@ -1,8 +1,13 @@
 <template>
     <section id="about">
         <h3 class="box-title">About me</h3>
-        <p>After spending 12 years in the tourism industry, I decided to make a career change and become a programmer. Besides continous self-learning, hundreds of hours of Udemy courses and other tutorials, in 2019 I attended a Junior Software Developer bootcamp and started to work as a Frontend Developer. Nowadays I focus on improving my skills with modern JavaScript frameworks and other web development technologies.</p>
         <div class="about-flex">
+            <div class="avatar">
+                <div class="img"></div>
+            </div>
+            <p>After spending 12 years in the tourism industry, I decided to make a career change and become a programmer. Besides continous self-learning, hundreds of hours of Udemy courses and other tutorials, in 2019 I attended a Junior Software Developer bootcamp and started to work as a Frontend Developer. Nowadays I focus on improving my skills with modern JavaScript frameworks and other web development technologies.</p>
+        </div>
+        <div class="list-flex">
             <article>
                 <h4 class="sub-title">Tasks I enjoy the most</h4>
                 <ul>
@@ -38,11 +43,46 @@ export default Vue.extend({
 @import '../../../scss/shared';
 
 section#about {
-    p {
-        line-height: 1.5;
-        text-align: justify;
-    }
     .about-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: $sm) {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        .avatar {
+            position: relative;
+            top: 5px;
+            flex: none;
+            margin: 1rem 1rem 0 0;
+            z-index: 1;
+            .img {
+                background: url(../../../assets/images/me.jpg);
+                width: 80px;
+                height: 80px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                border-radius: 50%;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: -3px;
+                left: -3px;
+                width: 86px;
+                height: 86px;
+                border-radius: 50%;
+                background: $gradient-topdown;
+                z-index: -1;
+            }
+        }
+        p {
+            line-height: 1.5;
+            text-align: justify;
+        }
+    }
+    .list-flex {
         display: flex;
         align-items: flex-start;
         flex-direction: column;
