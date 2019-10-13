@@ -46,13 +46,16 @@ const mutations = {
         st.itemsLoaded = true;
     },
     filterItems(st: PortfolioState, filter: string): void {
-        if (filter === 'All') {
-            st.filteredPortfolio = [...st.portfolioItems];
-        } else {
-            st.filteredPortfolio = st.portfolioItems.filter((item) => {
-                return item.badges.includes(filter);
-            });
-        }
+        st.filteredPortfolio = [];
+        setTimeout(() => {
+            if (filter === 'All') {
+                st.filteredPortfolio = [...st.portfolioItems];
+            } else {
+                st.filteredPortfolio = st.portfolioItems.filter((item) => {
+                    return item.badges.includes(filter);
+                });
+            }
+        }, 400);
     },
 };
 

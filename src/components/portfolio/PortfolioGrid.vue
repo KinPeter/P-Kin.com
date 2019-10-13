@@ -30,18 +30,18 @@ section#portfolio-grid {
     width: 100%;
     display: block;
     @media (min-width: $sm) {
-        margin-top: 160px;
+        margin-top: 175px;
     }
     @media (min-width: $md) {
-        margin-top: 130px;
+        margin-top: 145px;
     }
     @media (min-width: $lg) {
         display: grid;
-        grid-gap: 0 1rem;
-        grid-template-columns: repeat(2, calc(50% - .5rem));
+        grid-gap: 1rem 2rem;
+        grid-template-columns: repeat(2, calc(50% - 1rem));
     }
     @media (min-width: $xl) {
-        margin-top: 90px;
+        margin-top: 105px;
     }
 }
 </style>

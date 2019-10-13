@@ -1,6 +1,6 @@
 <template>
     <transition name="filters" appear>
-        <section id="portfolio-filters" :class="{scrolled: scrolledHeader}">
+        <section id="filters-container" :class="{scrolled: scrolledHeader}">
             <h4>Filters 
                 <i class="icon-arrow-down" v-if="scrolledHeader"></i>
                 <i class="icon-arrow-right" v-else></i>
@@ -9,7 +9,7 @@
                 <span
                     v-for="filter in portfolioFilters"
                     :key="filter"
-                    @click="filterAndClose(filter)">
+                    @click="filterPortfolio(filter)">
                     {{ filter | uppercase }}
                 </span>
             </div>
@@ -27,10 +27,6 @@ export default Vue.extend({
     },
     methods: {
         ...mapActions(['filterPortfolio']),
-        filterAndClose(filter: string): void {
-            // this.$store.dispatch('closeSideDrawer');
-            this.$store.dispatch('filterPortfolio', filter);
-        },
     },
 });
 </script>
@@ -39,7 +35,7 @@ export default Vue.extend({
 @import '../../scss/variables';
 @import '../../scss/shared';
 
-section#portfolio-filters {
+section#filters-container {
     background: $dark;
     color: white;
     position: fixed;
