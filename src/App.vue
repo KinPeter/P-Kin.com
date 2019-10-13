@@ -35,9 +35,9 @@ export default Vue.extend({
     methods: {
         ...mapActions(['fetchSkills', 'fetchOtherTechs', 'headerScrolledDown', 'headerScrolledToTop']),
         onScroll(): void {
-            if (window.scrollY >= 150 && !this.scrolledHeader) {
+            if (window.scrollY >= 100 && !this.scrolledHeader) {
                 this.headerScrolledDown();
-            } else if (window.scrollY < 150 && this.scrolledHeader) {
+            } else if (window.scrollY < 100 && this.scrolledHeader) {
                 this.headerScrolledToTop();
             }
         },

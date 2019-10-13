@@ -46,7 +46,9 @@ export default Vue.extend({
     background-color: #fff;
     box-shadow: 0 3px 3px rgba(0,0,0,0.5);
     transition: all .3s ease;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 999;
 
     img {
@@ -68,6 +70,7 @@ export default Vue.extend({
             color: white;
             font-size: 2.2rem;
             cursor: pointer;
+            transition: all .3s ease;
             &:hover {
                 animation: logoBlur .5s ease;
                 text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
@@ -81,6 +84,7 @@ export default Vue.extend({
         #nav {
             position: relative;
             display: none;
+            transition: all .3s ease;
             @media (min-width: $sm) {
                 display: block;
             }
@@ -127,14 +131,7 @@ export default Vue.extend({
         }
     }
     &.scrolled {
-        position: fixed;
-        top:0;
-        left: 0;
-        animation: headerIn .2s ease forwards;
-        @keyframes headerIn {
-            from { height: 0px; opacity: 0; }
-            to   { height: 50px; opacity: 1; }
-        }
+        height: 50px;
         .header-inner {
             i {
                 font-size: 1.5rem;
