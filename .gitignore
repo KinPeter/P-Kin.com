@@ -2,6 +2,7 @@
 node_modules
 /dist
 ftp-data.js
+portfolio-images
 
 # local env files
 .env.local
