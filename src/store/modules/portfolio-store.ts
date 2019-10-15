@@ -88,6 +88,7 @@ const actions = {
     },
     filterPortfolio(context: Context, filter: string): void {
         context.commit('filterItems', filter);
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     },
 };
 
