@@ -37,6 +37,9 @@ const getters = {
     isLoading(st: UIState): boolean {
         return st.loadingProgress.length !== 0;
     },
+    isOnMobile(): boolean {
+        return window.innerWidth < 576;
+    },
 };
 
 const mutations = {

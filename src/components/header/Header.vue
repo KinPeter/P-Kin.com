@@ -1,7 +1,7 @@
 <template>
 <section id="header" :class="{scrolled: scrolledHeader}">
-    <img v-if="!onMobile" src="@/assets/svg/header-bg.svg" alt="header-bg">
-    <img v-if="onMobile" src="@/assets/svg/header-bg-m.svg" alt="header-bg">
+    <img v-if="!isOnMobile" src="@/assets/svg/header-bg.svg" alt="header-bg">
+    <img v-if="isOnMobile" src="@/assets/svg/header-bg-m.svg" alt="header-bg">
     <div class="header-inner">
         <div id="nav">
             <router-link 
@@ -25,10 +25,10 @@ import { NavItem } from '@/models/header';
 
 export default Vue.extend({
     computed: {
-        ...mapGetters(['scrolledHeader', 'navItems']),
-        onMobile(): boolean {
-            return window.innerWidth < 576;
-        },
+        ...mapGetters(['isOnMobile', 'scrolledHeader', 'navItems']),
+        // onMobile(): boolean {
+        //     return window.innerWidth < 576;
+        // },
     },
     methods: {
         ...mapActions(['openSideDrawer']),
