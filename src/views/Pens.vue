@@ -1,28 +1,28 @@
 <template>
-    <section>
-        <transition name="cbox" appear tag="section" >
-            <app-content-box v-if="!isLoading">
-                <h3>This is the Pens Page</h3>
-            </app-content-box>
-        </transition>
+    <section v-if="!isLoading">
+        <app-pens-grid></app-pens-grid>
     </section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import { mapGetters } from 'vuex';
-import ContentboxVue from '../components/content-box/ContentBox.vue';
+import { mapGetters, mapActions } from 'vuex';
+import PensGridVue from '../components/pens/PensGrid.vue';
 
 export default Vue.extend({
     computed: {
-        ...mapGetters(['isLoading']),
+        ...mapGetters(['isLoading', 'pensLoaded']),
+    },
+    methods: {
+        ...mapActions(['fetchPenItems']),
     },
     components: {
-        appContentBox: ContentboxVue,
+        appPensGrid: PensGridVue,
+    },
+    created() {
+        if (!this.pensLoaded) {
+            this.fetchPenItems();
+        }
     },
 });
 </script>
-
-<style lang="scss">
-
-</style>
