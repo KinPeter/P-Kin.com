@@ -31,40 +31,19 @@ export default Vue.extend({
 
 <style lang="scss">
 @import '../../scss/variables';
+@import '../../scss/shared';
 
 section#error-dialog {
     position: fixed;
     top: 100px;
     left: 0;
     z-index: 999;
-    padding: 1rem;
-    padding-right: 2rem;
     width: 310px;
     box-sizing: border-box;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: rgba(0,0,0,0.9);
     color: $magenta;
-    font-family: $mont-reg;
-
-    .dialog-box {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        .icon {
-            margin-right: 1rem;
-            i {
-                font-size: 2rem;
-            }
-        }
-    }
-    a {
-        color: $light;
-        font-size: 2.2rem;
-        cursor: pointer;
-        position: absolute;
-        top: 0;
-        right: 10px;
-    }
+    @extend %dialogBox;
 }
 </style>
