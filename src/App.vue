@@ -4,6 +4,9 @@
         <transition name="error-dialog">
             <app-error-dialog v-if="hasError"></app-error-dialog>
         </transition>
+        <transition name="error-dialog">
+            <app-error-dialog v-if="hasDeprecationError" :deprecation="true"></app-error-dialog>
+        </transition>
 
         <app-header></app-header>
 
@@ -30,7 +33,7 @@ import ErrorDialogVue from './components/error-dialog/ErrorDialog.vue';
 
 export default Vue.extend({
     computed: {
-        ...mapGetters(['scrolledHeader', 'sideDrawerOpen', 'isLoading', 'hasError', 'skillsLoaded']),
+        ...mapGetters(['scrolledHeader', 'sideDrawerOpen', 'isLoading', 'hasError', 'hasDeprecationError', 'skillsLoaded']),
     },
     methods: {
         ...mapActions(['fetchSkills', 'fetchOtherTechs', 'headerScrolledDown', 'headerScrolledToTop']),
